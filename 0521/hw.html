@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var text = "";
+		function add(){
+			var x = parseInt(document.getElementById("N1").value);
+			var y = parseInt(document.getElementById("N2").value);
+			text = "Ans:" + (x + y);
+			document.getElementById("Ans").innerHTML = text;
+		}
+		function minus(){
+			var x = parseInt(document.getElementById("N1").value);
+			var y = parseInt(document.getElementById("N2").value);
+			text = "Ans:" + (x - y);
+			document.getElementById("Ans").innerHTML = text;
+		}
+		function multiply(){
+			var x = parseInt(document.getElementById("N1").value);
+			var y = parseInt(document.getElementById("N2").value);
+			text = "Ans:" + (x * y);
+			document.getElementById("Ans").innerHTML = text;
+		}
+		function divide(){
+			var x = parseInt(document.getElementById("N1").value);
+			var y = parseInt(document.getElementById("N2").value);
+			text = "Ans:" + (x / y);
+			document.getElementById("Ans").innerHTML = text;
+		}
+		function clean(){
+			document.getElementById("N1").value = "";
+			document.getElementById("N2").value = "";
+			document.getElementById("Ans").innerHTML = "";
+		}
+
+
+
+		function gradein(){
+			var grade = parseInt(document.getElementById("gg").value);
+			if (grade< 60 ) {
+				document.getElementById("text2").innerHTML = "沒過! 明年見";
+			}else{
+				document.getElementById("text2").innerHTML = "過ㄌ! 算你幸運";
+			}
+		}
+
+	</script>
+</head>
+<body>
+<h1>Caculator</h1>
+<input id="N1">
+<input id="N2">
+<button type="button" onclick="add()">Add</button>
+<button type="button" onclick="minus()">minus</button>
+<button type="button" onclick="multiply()">mutiply</button>
+<button type="button" onclick="divide()">divide</button>
+<button type="button" onclick="clean()">clean</button>
+<p id="Ans"></p>
+<hr>
+<h1>Grade</h1>
+<input id="gg">
+<button type="button" onclick="gradein()">Enter</button>
+<p id = "text2">
+</body>
+</html>
